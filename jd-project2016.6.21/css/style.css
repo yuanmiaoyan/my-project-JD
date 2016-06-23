@@ -1,0 +1,2155 @@
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+    -webkit-font-smoothing: antialiased; /*可以让字体平滑更清晰*/
+}
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "microsoft yahei";
+    font-weight: 400;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*headTop*/
+.headTop {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #F1F1F1;
+}
+
+.w1210px {
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.headTopL {
+    float: left;
+    position: relative;
+}
+
+.headTopL .iconArr dt {
+    padding: 0 25px 0 10px;
+    border-left: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+}
+.headTopL .dropDownHover:hover{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.iconArr dt b {
+    float: right;
+    top: 12px;
+    right: 8px;
+    height: 7px;
+    overflow: hidden;
+    font: 400 15px/15px consolas;
+    color: #6A6A6A;
+    transition: transform .1s ease-in 0s;
+    -webkit-transition: -webkit-transform .1s ease-in 0s;
+    display: block;
+    position: absolute;
+}
+
+.iconArr dt b i {
+    position: relative;
+    top: -7px;
+}
+.dropDownHover:hover b{
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+    transition: all 0s;
+}
+.dropDownHover:hover .dropDownLayer{
+    display: block;
+}
+.whiteBgCover{
+    position: absolute;
+    top: -7px;
+    height: 10px;
+    background: #fff;
+    overflow: hidden;
+    left: 0;
+    width: 98px;
+}
+.dropDownLayer{
+    display: none;
+    width: 301px;
+    padding: 10px 0 10px 10px;
+    top: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    line-height: 24px;
+    position: absolute;
+    z-index: 20;
+}
+.myJd .dropDownLayer{
+    left: 0;
+    width: 280px;
+}
+.myJd .dropDownLayer .whiteBgCover{
+    width: 79px;
+}
+.myJd .userInfo{
+    padding: 10px 0 10px 15px;
+    overflow: hidden;
+}
+.myJd .userAvatar{
+    float: left;
+    margin-right: 10px;
+}
+.myJd .userAvatar a img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.myJd .userInfoR{
+    float: left;
+    padding: 6px 0 0;
+}
+.myJd .userInfoR .userName{
+    font-weight: 700;
+}
+.myJd .otherList{
+    width: 255px;
+    padding: 0 0 0 15px;
+    margin: 5px 0 10px;
+    overflow: hidden;
+}
+.myJd .otherList dd {
+    float: left;
+    width: 126px;
+}
+.layerItem{
+    float: left;
+    width: 60px;
+    padding: 2px 0;
+}
+.layerItem a{
+    float: left;
+    padding: 0 8px;
+}
+.layerItem a:hover{
+    background: #e4e4e4;
+}
+.dropDownLayer .layerItem .active{
+    background: #C81623;
+    color: #fff;
+
+}
+/*头部右侧*/
+.headTopR {
+    float: right;
+}
+
+.headTopR>li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 2px;
+    position: relative;
+}
+
+.headTopR .headTopLogin {
+    margin-right: 10px;
+}
+
+.linkLogin {
+    font-family: "verdana,simsun";
+}
+
+.colorRed {
+    color: #C81623;
+}
+
+.headTopR .spacer {
+    width: 1px;
+    height: 12px;
+    margin-top: 9px;
+    padding: 0;
+    background: #ddd;
+    overflow: hidden;
+}
+
+.wrapPadding {
+    float: left;
+    padding: 0 8px;
+}
+
+.myJd .wrapPadding {
+    padding-right: 23px;
+    width: 49px;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+}
+.myJd:hover .wrapPadding{
+    border-color: #ddd;
+}
+
+.iconPos {
+    position: relative;
+    zoom: 1;
+}
+
+.phoneArr {
+    float: left;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 15px;
+    height: 20px;
+    background: url("../img/jd2015img.png") 0 0 no-repeat;
+}
+
+.phoneJd {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.phoneJd:hover {
+    background: #fff;
+}
+.phoneJd .dropDownLayer .whiteBgCover{
+    width: 96px;
+}
+.dropDownHover:hover {
+    background: #ffffff;
+}
+
+.phoneJd:hover .phoneArr {
+    background-position: 0 -25px;
+}
+.phoneJdInner{
+    position: relative;
+    width: 250px;
+    height: 195px;
+    overflow: hidden;
+    background: url("../img/phoneJD.png") no-repeat;
+}
+.phoneJdInner a{
+    display: block;
+    position: absolute;
+    width: 56px;
+    height: 44px;
+    overflow: hidden;
+    text-indent: -500px;
+    left: 92px;
+    top: 6px;
+}
+.phoneJdInner .link{
+    width: 100px;
+    height: 20px;
+}
+.phoneJdInner .jdLink{
+    overflow: hidden;
+    left: 92px;
+    top: 6px;
+}
+.phoneJdInner .walletLink{
+    left: 92px;
+    top:104px;
+}
+.phoneJdInner .newVip,.phoneJdInner .code{
+    left: 99px;
+    top: 23px;
+    width: 136px;
+    color: #c21a21;
+    text-indent: 0;
+    cursor: default;
+}
+.phoneJdInner .code{
+    top:120px;
+}
+.phoneJdInner .appLinkIos{
+    top: 46px;
+    left: 92px;
+}
+.phoneJdInner .appLinkAndroid{
+    top: 46px;
+    left: 147px;
+}
+.phoneJdInner .appLinkIpad{
+    top: 46px;
+    left: 202px;
+}
+.phoneJdInner .appLinkIos2{
+    top: 143px;
+    left: 92px;
+}
+.phoneJdInner .appLinkAndroid2{
+    top: 143px;
+    left: 147px;
+}
+.attention .wrapPadding{
+    width: 52px;
+}
+.attention .dropDownLayer{
+    width: 82px;
+    padding: 0;
+    padding-bottom: 8px;
+}
+.attention .wrapPadding .whiteBgCover{
+    width: 82px;
+}
+.client .dropDownLayer{
+    width: 170px;
+}
+.clientTitle{
+    padding-left:10px;
+    font-weight: 700;
+}
+.clientItem li{
+    padding-left: 10px;
+    width: 70px;
+    display: inline-block;
+}
+.businessTitle{
+    border-top: 1px dotted #ccc;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+.internetNav .dropDownLayer{
+    width: 1210px;
+    padding: 20px 0 16px;
+    left: auto;
+    right:0;
+}
+.internetNav .whiteBgCover{
+    left: auto;
+    right: 0;
+}
+.internetNav .dropDownLayer dl{
+    float: left;
+    width: 201px;
+    padding-left: 20px;
+    border-right: 1px solid #ddd;
+}
+.internetNav .dropDownLayer .nav1{
+    width: 347px;
+}
+.internetNav .dropDownLayer .nav2{
+    width: 259px;
+}
+.internetNav .dropDownLayer .nav4{
+    border-right: 0;
+}
+.internetNav .dropDownLayer .nav1 dt{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.internetNav .dropDownLayer .nav1 dd a{
+    float: left;
+    width: 86px;
+}
+/*头部banner*/
+.topBanner {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin: 0px auto 0px;
+    background-color: #CE1C98;
+    opacity: 1;
+}
+
+.topBanner .closeBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url("../img/close-btn.png") 0px 0px no-repeat;
+}
+
+.topBanner .closeBtn:hover {
+    background-position: 0 -19px;
+}
+
+/*search*/
+.logoWrap {
+    position: relative;
+    z-index: 12;
+    float: left;
+    width: 362px;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.logoWrap .logo {
+    display: block;
+    width: 270px;
+    height: 60px;
+    background: url("../img/logo.png") no-repeat 0 0;
+    text-indent: -20000px;
+}
+
+.searchWrap {
+    width: 538px;
+    position: relative;
+    z-index: 11;
+    float: left;
+    margin-top: 25px;
+}
+
+.searchTxt {
+    float: left;
+    width: 446px;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    padding: 4px;
+    margin-bottom: 4px;
+    border: 2px solid #B61D1D;
+    border-right: 0;
+    outline: 0;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+
+.searchBtn {
+    float: left;
+    width: 82px;
+    height: 36px;
+    background: #B61D1D;
+    border: none;
+    line-height: 1;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hotwords {
+    float: left;
+    width: 518px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.hotwords a {
+    float: left;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.myShoppingCar {
+    float: right;
+    z-index: 11;
+    height: 36px;
+    margin-top: 25px;
+    margin-right: 65px;
+    position: relative;
+}
+.myShoppingCar:hover .iconPos{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background: #fff;
+}
+.myShoppingCar:hover .myShoppingCarDrop{
+    display: block;
+}
+
+.myShoppingCarDrop{
+    display: none;
+    width: 308px;
+    position: absolute;
+    right: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.myShoppingCarDrop .cover{
+    width: 139px;
+    position: absolute;
+    right:0;
+    top:-6px;
+    height: 15px;
+    background: #fff;
+}
+
+.dropInner{
+    padding:10px 15px;
+}
+.nothing{
+    height: 49px;
+    line-height: 49px;
+    padding-left: 30px;
+}
+.nothing span{
+    width: 57px;
+    height: 49px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/settleup-nogoods.png") no-repeat;
+}
+.iconPos i {
+    display: block;
+    position: absolute;
+}
+
+.myShoppingCar .iconPos {
+    width: 75px;
+    height: 34px;
+    border: 1px solid #DFDFDF;
+    padding: 0 28px 0 36px;
+    background: #F9F9F9;
+    text-align: center;
+    line-height: 34px;
+}
+
+.myShoppingCar .iconPos .iconL {
+    top: 9px;
+    left: 18px;
+    width: 18px;
+    height: 16px;
+    background: url("../img/jd2015img.png") 0 -58px no-repeat;
+}
+
+.myShoppingCar .iconPos .iconR {
+    top: 11px;
+    right: 10px;
+    width: 7px;
+    height: 13px;
+    overflow: hidden;
+    font: 400 13px/13px simsun;
+    color: #999;
+}
+
+.myShoppingCar .iconPos .iconCount {
+    position: absolute;
+    top: -4px;
+    left: 104px;
+    display: inline-block;
+    padding: 1px 2px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #c81623;
+    border-radius: 7px 7px 7px 0;
+    min-width: 12px;
+    text-align: center;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+/*nav*/
+.navWrap {
+    height: 44px;
+    border-bottom: 2px solid #B1191A;
+    position: relative;
+    z-index: 9;
+}
+
+.category {
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+    float: left;
+    position: relative;
+    z-index: 10;
+    width: 210px;
+    height: 44px;
+    overflow: visible;
+    background: #B1191A;
+}
+
+.category .dt a {
+    display: block;
+    width: 190px;
+    height: 44px;
+    padding: 0 10px;
+    background: #B1191A;
+    font: 400 15px/44px "microsoft yahei";
+    color: #fff;
+    text-decoration: none;
+}
+
+.category .dd {
+    height: 466px;
+    /*width: 1210px;*/
+    margin-top: 2px;
+}
+.inner{
+    width: 210px;
+    background: #c81623;
+}
+.item {
+    border-left: 1px solid #b61d1d;
+    position: relative;
+    z-index: 1;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    width: 210px;
+    background: #c81623;
+}
+
+.item h2 {
+    position: absolute;
+    z-index: 2;
+    height: 31px;
+    padding: 0 10px;
+    line-height: 31px;
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.item>i {
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    right: 14px;
+    width: 4px;
+    height: 14px;
+    font: 400 9px/14px consolas;
+}
+
+.category .dd h2 a {
+    color: #fff;
+}
+.item s{
+    display: none;
+    width: 24px;
+    height: 31px;
+    position: absolute;
+    right: -5px;
+    top:0;
+    background: #f7f7f7;
+    z-index: 3;
+}
+.item:hover,.hover{
+    background: #f7f7f7;
+    color: #b61d1d;
+}
+.itemSub{
+    display: none;
+    width: 100%;
+    min-height: 465px;
+    background: #f7f7f7;
+}
+.item:hover s,.hover s{
+    display: block;
+}
+.item:hover h2 a,.category .hover h2 a{
+    color: #b61d1d;
+}
+.elevator{
+    z-index: 5;
+    position: fixed;
+    left: -8.5px;
+    top: 10.5px;
+    display: none;
+    width: 30px;
+    overflow: hidden;
+}
+.elevator li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: -1px;
+    cursor: pointer;
+}
+.elevator li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    color: #625351;
+    font-size: 14px;
+    font-family: Arial;
+    background: rgba(255,255,255,0.5);
+    border-top: 1px dotted #333;
+}
+.elevator li:hover a{
+     display: none;
+ }
+.elevator li:hover .etitle{
+    display: block;
+    background: #b61d1d;
+    color: #fff;
+}
+.elevator li .etitle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+}
+.nav {
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+.navItemGroup {
+    float: left;
+}
+
+.navItemGroup li {
+    float: left;
+}
+
+.navItemGroup li a {
+    height: 44px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    font: 400 15px/44px "microsoft yahei";
+    color: #333;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+}
+
+.navItemGroup li a:hover {
+    color: #C81623;
+}
+
+.holiday {
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-right: 148px;
+}
+
+.holiday a {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    background: url("../img/holiday.jpg") no-repeat;
+}
+
+.activityBg {
+    position: relative;
+}
+
+.activityBg a {
+    height: 613px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background: url("../img/activity-bg.jpg") no-repeat center top;
+}
+
+.banner {
+    position: relative;
+    margin-left: 220px;
+    width: 730px;
+    float: left;
+    /*z-index: 12;*/
+}
+
+.banner .slide {
+    position: relative;
+    z-index: 3;
+    width: 730px;
+    background: url("../img/loading.gif") no-repeat center center;
+    height: 454px;
+    margin-top: 12px;
+}
+
+.banner .slide div {
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+}
+
+.bannerFocus {
+    position: absolute;
+    bottom: 24px;
+    left: 291px;
+    z-index: 7;
+}
+
+.bannerFocus li {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bannerFocus .bg, .bannerFocus li:hover {
+    background: #b61b1f
+}
+
+/*bannerRight*/
+.bannerRight {
+    margin-top: 12px;
+    width: 248px;
+    float: right;
+    z-index: 3;
+    position: relative;
+    height: 454px;
+    overflow: hidden;
+}
+
+.title {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    border: 1px solid #e4e4e4;
+    border-bottom: 1px dotted #E8E8E7;
+}
+
+.title h2 {
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    font-weight: 400;
+    float: left;
+}
+
+.more {
+    float: right;
+    font-family: consolas;
+}
+
+.content {
+    border-left: 1px solid #e4e4e4;
+    padding-left: 15px;
+    padding-top: 5px;
+    height: 120px;
+    overflow: hidden;
+    /*box-sizing: border-box;*/
+}
+
+.content li {
+    line-height: 24px;
+    height: 24px;
+}
+
+.content li span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.lifeTabs {
+    border: 1px solid #e4e4e4;
+    height: 212px;
+    width: 244px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lifeTabs .fore li {
+    width: 61px;
+    float: left;
+}
+
+.lifeTabs .fore li a {
+    width: 61px;
+    height: 57px;
+    padding-top: 13px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    display: block;
+    text-align: center;
+}
+
+.lifeTabs .fore li.current{
+    border-top: 2px solid #c81623;
+    padding-top: 0;
+}
+.lifeTabs .fore li a.show{
+
+    display: block;
+    width: 62px;
+    height: 28px;
+    padding-top: 0px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.lifeTabs .fore {
+    width: 248px;
+    overflow: hidden;
+}
+
+.lifeTabs .fore li a i {
+    margin: 0 auto;
+
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url("../img/banner-right-icons.png") no-repeat 0 0;
+}
+.hoverShowWrap .close{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+.hoverShowWrap .close:hover{
+    background: #ccc;
+}
+.lifeTabs .fore li.fore01 a i {
+    background-position: 0 0;
+}
+
+.lifeTabs .fore li.fore02 a i {
+    background-position: 0 -25px;
+}
+
+.lifeTabs .fore li.fore03 a i {
+    background-position: 0 -50px;
+}
+
+.lifeTabs .fore li.fore04 a i {
+    background-position: 0 -75px;
+}
+
+.lifeTabs .fore li.fore05 a i {
+    background-position: 0 -100px;
+}
+
+.lifeTabs .fore li.fore06 a i {
+    background-position: 0 -125px;
+}
+
+.lifeTabs .fore li.fore07 a i {
+    background-position: 0 -150px;
+}
+
+.lifeTabs .fore li.fore08 a i {
+    background-position: 0 -175px;
+}
+
+.lifeTabs .fore li.fore09 a i {
+    background-position: 0 -200px;
+}
+
+.lifeTabs .fore li.fore10 a i {
+    background-position: 0 -225px;
+}
+
+.lifeTabs .fore li.fore11 a i {
+    background-position: 0 -250px;
+}
+
+.lifeTabs .fore li.fore12 a i {
+    background-position: 0 -275px;
+}
+
+.lifeTabs .fore li a span {
+    height: 28px;
+    line-height: 28px;
+    display: block;
+}
+
+.adsPic {
+    margin-top: 5px;
+}
+.behind01 {
+    position: absolute;
+    height: 183px;
+    padding-left: 8px;
+    bottom:-188px;
+    background: #fff;
+    width: 236px;
+}
+.behind01 .tabs {
+    height: 19px;
+    padding-top: 15px;
+}
+.behind01 .tabs li{
+    float: left;
+    margin-right: 6px;
+    text-align: center;
+}
+.behind01 .tabs li a{
+    display: block;
+    padding: 0 2px;
+    line-height: 16px;
+    color: #666;
+    white-space: nowrap;
+    height: 19px;
+}
+.behind01 .tabs .selected a{
+    background: url("../img/iframe-san.png") no-repeat center center;
+    color: #fff;
+}
+.phoneNumber{
+    padding-top: 10px;
+    height: 23px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.phoneNumber span{
+    margin-right: 5px;
+    float: left;
+}
+.phoneNumber input,.phoneNumber select{
+    color: #000;
+    float: left;
+    width: 99px;
+    height: 20px;
+    padding: 0 4px;
+    margin: 0;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+.phoneNumber select{
+    width: 109px;
+    height: 22px;
+    border: 1px solid #ccc;
+    font-family: \5b8b\4f53;
+}
+.phoneNumber i{
+    float: left;
+    color: #c81623;
+    margin-left: 5px;
+}
+.btnWrap{
+    height: 26px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.btnWrap input{
+    width: 67px;
+    height: 26px;
+    background: #c81623;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    _line-height: 26px;
+    vertical-align: middle;
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+}
+.linkAd{
+    position: absolute;
+    left: 8px;
+    bottom: 4px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #999;
+}
+.linkAd a{
+    color: #005ea7;
+}
+
+.linkAd .iconHot{
+    display: inline-block;
+    width: 22px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: -1px;
+    background: url("../img/iframe-hot.png") 0 0 no-repeat;
+}
+/*banner next ads or bannerBottom*/
+.bannerBottom {
+    position: relative;
+    z-index: 3;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+}
+
+.bannerBottom .left a {
+    width: 210px;
+    height: 151px;
+    background: url("../img/banner-bottom-pic-01.jpg") no-repeat;
+    display: block;
+}
+
+.bannerBottomOuter {
+    float: left;
+    width: 1000px;
+    overflow: hidden;
+    height: 164px;
+}
+
+.bannerBottomOuter li {
+    width: 249px;
+    overflow: hidden;
+    float: left;
+    margin-right: 1px;
+    height: 164px;
+}
+
+/*618品牌活动*/
+.activityWrap618Brand {
+    margin-bottom: 20px;
+}
+
+.activityTitle h3 {
+    width: 362px;
+    height: 51px;
+    margin: 0 auto 10px;
+    background: url("../img/activity-618-title.png") no-repeat;
+}
+
+.activityWrap618Brand .activityTitle h3 {
+    background-position: 0 -52px;
+}
+
+.activityTitle h3 span {
+    visibility: hidden;
+}
+
+.activityT {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.activityT li {
+    float: left;
+    margin-right: 10px;
+}
+
+.activityWrap618Brand .noMargin,.activityWrap618Select .noMargin{
+    margin-right: 0;
+}
+
+.activityC {
+    overflow: hidden;
+}
+
+.goodsList {
+    overflow: hidden;
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    width: 606px;
+    float: left;
+}
+
+.goodsList li {
+    width: 294px;
+    height: 162px;
+    padding-left: 8px;
+    padding-top: 14px;
+    float: left;
+    border-bottom: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+}
+
+.goodsList li a {
+    display: block;
+}
+
+.goodsList li dt {
+    float: left;
+}
+
+.goodsList li dd {
+    float: left;
+    margin-left: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.goodsList li dd .price {
+    margin-top: 6px;
+    display: block;
+}
+
+.brandList {
+    width: 600px;
+    float: left;
+    overflow: hidden;
+    border-top: 1px solid #eddede;
+}
+
+.brandList li {
+    width: 149px;
+    height: 58px;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid #eddede;
+    border-bottom: 1px solid #eddede;
+    overflow: hidden;
+    float: left;
+}
+
+.brandBox {
+    position: relative;
+}
+.brandBox .img{
+    width: 149px;
+    height: 58px;
+    position: absolute;
+}
+.brandBox a{
+    display: block;
+    padding-top: 13px;
+    width: 149px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    *background: #000;
+    font-family: "microsoft yahei";
+    color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all 0.2s;
+
+}
+.brandBox a:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.activityWrap618Select .activityT li{
+    padding-top: 10px;
+    height: 210px;
+}
+.activityWrap618Select .activityT .item2{
+    padding-top: 0;
+    height: 220px;
+}
+.activityWrap618Select .activityTitle h3{
+    width: 386px;
+}
+.selectCategory{
+    overflow: hidden;
+}
+.selectCategory li{
+    float: left;
+    margin-right: 10px;
+}
+/*floor01*/
+.floor{
+    margin-bottom: 30px;
+}
+.floorClothes{
+    width: 1210px;
+    height: 737px;
+    background:#fff url("../img/loading.gif") no-repeat center center;
+}
+.floorTitle{
+    border-bottom: 1px solid #c81623;
+    height: 36px;
+}
+.floorTitle h2{
+    color: #333;
+    font-size: 20px;
+    float: left;
+}
+.floorTitle h2 i{
+    display: inline-block;
+    width: 28px;
+    height: 22px;
+    padding-top: 3px;
+    line-height: 25px;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 13px;
+    padding-left: 3px;
+    background: url("../img/product_home_1.0.0.png") no-repeat 0 -35px;
+}
+.tab{
+    border:1px solid #ededed;
+    border-bottom: 0;
+    height: 34px;
+    line-height: 34px;
+    z-index: 1;
+    float: right;
+    display: inline;
+    margin-top: 1px;
+}
+.tabItem{
+    width: 58px;
+    float: left;
+    display: inline;
+    height: 34px;
+    position: relative;
+}
+.tabItemLong{
+    width: 82px;
+}
+.tabItem a{
+    float: left;
+    height: 32px;
+    padding: 2px 16px 0;
+    text-decoration: none;
+    line-height: 34px;
+    overflow: hidden;
+    background: #fff;
+    border-left:1px solid  #fff;
+    border-right:1px solid #fff;
+    white-space: nowrap;
+    position: absolute;
+}
+/*.tabItemSelected a{
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    top:-1px;
+    left: -1px;
+    text-indent: 1px;
+    border-left:1px solid #c81623;
+    border-right:1px solid #c81623;
+    border-top:3px solid #c81623;
+    border-bottom:1px solid #fff;
+    color: #c81623;
+    padding-top: 0;
+    z-index: 2;
+
+}*/
+.tabItemSelected{
+    border-left:1px solid #c81623;
+    border-right:1px solid #c81623;
+    border-top:3px solid #c81623;
+    border-bottom:1px solid #fff;
+    margin-top: -1px;
+    top:-1px;
+    left: -1px;
+}
+
+.tabItem span{
+    position: absolute;
+    width: 1px;
+    background: #ccc;
+    overflow: hidden;
+    height: 14px;
+    top: 10px;
+    right: 0;
+}
+/*需要js处理*/
+.tabItemSelected span{
+    display: none;
+}
+.floorCon{
+    overflow: hidden;
+    height: 630px;
+}
+.floorConInner{
+    overflow: hidden;
+    height: 633px;
+    display: none;
+}
+.show{
+    display: block;
+}
+.side{
+    float: left;
+    width: 330px;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+}
+.sideTop{
+    position: relative;
+    height: 474px;
+}
+.sideTop>a{
+    display: block;
+    height: 475px;
+}
+.floorList{
+    position: absolute;
+    top:253px;
+    padding-left: 25px;
+    background: rgba(255,255,255,.5);
+}
+.floorList li{
+    height: 26px;
+    width: 100px;
+    padding: 10px 0;
+    float: left;
+}
+.floorList li a{
+    float: left;
+}
+.floorList li a i{
+    width: 26px;
+    height: 26px;
+    float: left;
+    background: url("../img/clothesicon.png") no-repeat;
+    margin-right: 5px;
+}
+.floorList li.fore01 a i{
+     background-position: 0 0;
+ }
+.floorList li.fore02 a i{
+    background-position: 0 -26px;
+}
+.floorList li.fore03 a i{
+    background-position: 0 -52px;
+}
+.floorList li.fore04 a i{
+    background-position: 0 -78px;
+}
+.floorList li.fore05 a i{
+    background-position: 0 -104px;
+}
+.floorList li.fore06 a i{
+    background-position: 0 -130px;
+}
+.floorList li a span{
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+}
+.activityLogo{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    background: url("../img/activity-logo.png") no-repeat;
+    z-index: 10;
+}
+.keywords{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 129px;
+    background: rgba(255,255,255,0.7);
+    font-family: \5b8b\4f53;
+}
+.keywords li{
+    float: left;
+    width: 135px;
+    padding: 16px 0 0 25px;
+    overflow: hidden;
+    height: 96px;
+}
+.keywords li a{
+    float: left;
+    margin-right: 10px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+.sideBottom{
+    position: relative;
+    width: 328px;
+    height: 157px;
+    border: 1px solid #ededed;
+    border-left: 1px solid #f7f5ee;
+    border-top: 0;
+    overflow: hidden;
+}
+.center{
+    float: left;
+}
+.centerTop{
+    position: relative;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    width: 439px;
+    height: 157px;
+    overflow: hidden;
+}
+.centerSlider{
+    width: 439px;
+    height: 315px;
+    overflow: hidden;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    position: relative;
+}
+.centerSlider .centerSliderBanner{
+    width: 1756px;
+    position: absolute;
+    left: 0;
+    height: 316px;
+}
+.centerSlider .centerSliderBanner div{
+    float: left;
+    width: 439px;
+}
+.floorFocus {
+    width: 100%;
+    line-height: 0;
+    text-align: center;
+    bottom: 19px;
+    cursor: default;
+    position: absolute;
+}
+.floorFocus li{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.floorFocus li.bg{
+    background: #b61b1f;
+}
+.slideArr a{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 10;
+    display: none;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+.slideArr .right{
+    right:0;
+}
+.centerBottom{
+    width: 439px;
+    height: 157px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    position: relative;
+}
+.rightSide{
+    float: left;
+}
+.rightSide ul{
+    float: left;
+    width: 220px;
+    height: 633px;
+    overflow: hidden;
+}
+.rightSide ul li{
+    width: 219px;
+    height: 157px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.rightSide ul li.specialPic{
+    height: 315px;
+    overflow: hidden;
+}
+.floorBottomAds{
+    background: #f7f7f7;
+    padding: 13px 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.floorBottomAds li{
+    float: left;
+    width: 120px;
+    height: 40px;
+    border-right: 1px dotted #ccc;
+    text-align: center;
+}
+.floorBottomAds li.noBorder{
+    border: 0;
+}
+/*个护美妆*/
+.floorMakeUp .side{
+    width: 210px;
+}
+.floorMakeUp .floorList{
+    width: 210px;
+    padding-left: 10px;
+    top:229px;
+}
+.floorMakeUp .floorList li a i{
+    background-image: url("../img/make-up-side-left.png");
+}
+.floorMakeUp .keywords{
+    height: 153px;
+}
+.floorMakeUp .keywords li{
+    font-size: 14px;
+    padding-top: 21px;
+    line-height: 24px;
+    font-family: "Microsoft YaHei";
+    width: auto;
+    white-space: nowrap;
+    height: 48px;
+    border-bottom:1px dotted #e4e4e4;
+}
+.floorMakeUp .keywords li.words{
+    padding-top: 7px;
+    border-bottom: 0;
+    height: 76px;
+}
+.floorMakeUp .keywords li.words a{
+    float: left;
+    margin-right: 10px;
+    line-height: 24px;
+    white-space: nowrap;
+    font-family: \5b8b\4f53;
+    font-size: 12px;
+}
+.floorMakeUp .sideRight{
+    width: 660px;
+    overflow: hidden;
+}
+.floorMakeUp .sideRight li{
+    float: left;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+
+
+
+
+
+
+
+
+/*floorBanner*/
+.floorBanner{
+    overflow: hidden;
+    width: 1200px;
+    margin: 10px auto;
+}
+.floorBanner a{
+    float: left;
+}
+.floorBanner a img{
+    width: 400px;
+    height: 125px;
+}
+.floorSecBanner{
+    width: 339px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    float: left;
+    height: 474px;
+    overflow: hidden;
+    position: relative;
+}
+.floorSecBanner li{
+    width: 339px;
+}
+.floorSecBanner li a{
+    position: relative;
+}
+.floorSecBanner li .bannerTop{
+    border-bottom: 1px dotted #e4e4e4;
+    height: 296px;
+    display: block;
+}
+.floorSecBanner li .bannerBot{
+    height: 176px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*slogen*/
+.slogen{
+    width: 100%;
+    height: 54px;
+    padding: 20px 0;
+    margin: 14px 0;
+    background: #f5f5f5;
+}
+.slogen li{
+    float: left;
+    width: 302px;
+}
+/*moreService*/
+.moreService{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.moreService dl{
+    width: 199px;
+    float: left;
+}
+.moreService .featureService{
+    width: 100px;
+}
+.moreService dl dt{
+    padding: 6px 0;
+    font: 400 16px/24px "microsoft yahei";
+}
+.moreService dl dd{
+    line-height: 20px;
+}
+.coverage{
+    float: right;
+    width: 310px;
+    height: 168px;
+    background: url("../img/coverage.png") no-repeat 60px -131px;
+}
+.coverageTitle{
+    padding: 6px 40px 15px 80px;
+    font: 400 16px/24px "microsoft yahei";
+}
+.coverageCon{
+    padding: 0 40px 15px 80px;
+}
+.coverageCon a{
+    float: right;
+}
+/*special*/
+.specialFloor{
+    overflow: hidden;
+}
+.specialFloor h2{
+    line-height: 30px;
+    font-size: 20px;
+}
+.special{
+    width: 901px;
+    float: left;
+
+}
+.special ul{
+    border-left: 1px solid #EDEDED;
+    border-top: 1px solid #EDEDED;
+    overflow: hidden;
+}
+.special li{
+    float: left;
+    width: 199px;
+    height: 104px;
+    padding: 18px 10px;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    overflow: hidden;
+}
+.special li  .specialImg img{
+    transform: translate(0px);
+    transition: all 0.5s ease-out;
+}
+.special li .fore1 .specialImg img{
+    margin-right: 49px;
+}
+.special li:hover  .specialImg img{
+    transform: translate(-10px);
+}
+.special .fore1{
+    width: 219px;
+    height: 245px;
+}
+.special .specialImg{
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.special .fore1 .specialImg{
+    width: 219px;
+    height: 180px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.special .specialName{
+    width: 200px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    color: #666;
+    word-break: break-all;
+}
+.special .specialPrice{
+    width: 200px;
+    color: #e12228;
+    font-size: 16px;
+    font-weight: 700;
+}
+.specialInfo{
+    float: right;
+    width: 94px;
+}
+.specialInfo .specialName{
+    width: 100%;
+}
+.share{
+    width: 309px;
+    float: left;
+}
+.shareCon{
+    width: 268px;
+    height: 226px;
+    padding: 35px 20px 20px;
+    border: 1px solid #EDEDED;
+    border-left: 0;
+}
+.shareConOuter{
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    width: 268px;
+}
+.shareConInner{
+    position: absolute;
+    top:0;
+}
+.shareConInner li{
+    display:list-item;
+    height: 120px;
+    overflow: hidden;
+}
+.shareConInner li dt{
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding: 10px 0;
+}
+.shareConInner li dt img{
+    width: 80px;
+    height: 80px;
+}
+.shareConInner li dd{
+    float: left;
+    width: 166px;
+    padding-left: 20px;
+    margin-top: 3px;
+}
+.authorInfo{
+    height: 28px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.authorInfo img{
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.authorInfo span{
+    line-height: 28px;
+}
+.evaluateDetail{
+    position: relative;
+    width: 130px;
+    height: 34px;
+    padding: 10px 15px 10px 20px;
+    background: #f8f8f8;
+    color: #999;
+    overflow: visible;
+}
+.arrowR{
+    font-size: 38px;
+    line-height: 38px;
+    color: #aaa;
+    vertical-align: -24px;
+    font-family: Arial;
+}
+.detailArrow{
+    position: absolute;
+    left: -9px;
+    top:19px;
+    font-size: 20px;
+    color: #F9F9F9;
+}
+.arrowL{
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    font-size: 38px;
+    line-height: 38px;
+    color: #aaa;
+    font-family: Arial;
+}
+/*footer*/
+.footer {
+    border-top: 1px solid #E5E5E5;
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
+.footerNav a {
+    margin: 0 10px;
+}
+
+.copyRights {
+    margin: 10px 0;
+}
+
+.outerLink a {
+    margin: 0 5px;
+}
+.subNavDropDownLayer{
+    position: absolute;
+    left: 209px;
+    top: 45px;
+    width: 999px;
+    min-height: 465px;
+    border: 1px solid #b61d1d;
+    overflow: hidden;
+    display: none;
+}
+.itemSub .itemBrands{
+    float: right;
+    display: inline;
+    width: 168px;
+    overflow: hidden;
+    margin: 19px 20px 10px 0;
+}
+.itemSub .itemBrands a{
+    float: left;
+    display: inline;
+    margin: 1px 0 0 1px;
+}
+.itemChannels{
+    float: left;
+    display: inline;
+    width: 790px;
+    height: 24px;
+    padding: 20px 0 0 20px;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+.itemChannels a{
+    float: left;
+    display: inline-block;
+    padding: 0 0 0 8px;
+    margin-right: 10px;
+    line-height: 24px;
+    background: #7C7171;
+    color: #fff;
+    white-space: nowrap;
+}
+.itemChannels a:hover{
+    background: #B1191A;
+}
+.itemChannels a:hover i{
+    background: #7d0227;
+}
+.itemChannels a i{
+    display: inline-block;
+    _display: inline;
+    margin-left: 8px;
+    width: 23px;
+    height: 24px;
+    font: 400 9px/24px consolas;
+    background: #5c5251;
+    text-align: center;
+    cursor: pointer;
+}
+.subItems{
+    float: left;
+    width: 790px;
+    padding: 6px 0 1006px 20px;
+    margin-bottom: -1000px;
+    background: #f7f7f7;
+    min-height: 409px;
+    _height: 409px;
+    _overflow: visible;
+}
+.itemPromotions{
+    float: right;
+    display: inline;
+    width: 168px;
+    margin-right: 20px;
+}
+.subItems dl{
+    width: 100%;
+    overflow: hidden;
+    line-height: 2em;
+}
+.subItems dl dt{
+    position: relative;
+    float: left;
+    width: 54px;
+    padding: 8px 30px 0 0;
+    text-align: right;
+    font-weight: 700;
+}
+.subItems dl dt i{
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 4px;
+    height: 14px;
+    font: 400 9px/14px consolas;
+}
+.subItems dl dd{
+    float: left;
+    width: 620px;
+    padding: 6px 0;
+    border-top: 1px solid #eee;
+}
+.subItems dl:first-child dd{
+    border-top: 0;
+}
+.subItems dl dd a{
+    float: left;
+    padding: 0 8px;
+    margin: 4px 0;
+    line-height: 16px;
+    height: 16px;
+    border-left: 1px solid #e0e0e0;
+    white-space: nowrap;
+}
+
+
+/*toolBarTab*/
+.toolBarWrap{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -61px;
+    height: 200px;
+    background: red;
+    z-index: 100;
+}
+.toolBarTop{
+    position: absolute;
+    top: 50%;
+    left: -29px;
+    width: 35px;
+    margin-top: -161px;
+}
+.toolBarTop li{
+    width: 34px;
+    height: 35px;
+    margin-left: 1px;
+    position: relative;
+    z-index: 2;
+    background-color: #7a6e6e;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+.toolBarTop li i{
+    width: 34px;
+    height: 35px;
+    margin-left: 1px;
+    position: relative;
+    z-index: 2;
+    background-color: #7a6e6e;
+    transition: background-color 0.3s ease-in-out 0.1s;
+    display: inline-block;
+    background: url("../img/toolbars.png") no-repeat;
+}
+.toolBarTop li .tip{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 6px;
+    height: 6px;
+    background-position: -150px -150px;
+    z-index: 101;
+}
+.toolBarTop .top1 .icon{
+    background-position:  -88px -175px;
+}
+.toolBarTop .top2 .icon{
+    background-position:  -50px 0;
+}
+.toolBarTop .top3 .icon{
+    background-position:  -50px -50px;
+}
+.toolBarTop .top4 .icon{
+    background-position:  -50px -100px;
+}
+.toolBarTop .top5 .icon{
+    background-position:  -50px -150px;
+}
+.toolBarTop li:hover b{
+    /*left: -60px;*/
+    background-color: #c81623;
+    transform: translate(-94px);
+}
+.toolBarTop li b{
+    transform: translate(0px);
+    width: 62px;
+    height: 35px;
+    line-height: 35px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 微软雅黑;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    top: 0px;
+    background-color: rgb(122, 110, 110);
+    border-radius: 3px 0px 0px 3px;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.toolBarTop li:hover .icon{
+    background-color: #c81623;
+    transition: background-color 0.3s ease-in-out 0.1s;
+}
+.scrollT{
+    background: url("../img/toolbars.png") no-repeat;
+    background-position:  -50px -250px;
+    margin-top: 50px;
+    width: 34px;
+    height: 35px;
+    margin-left: 1px;
+    position: absolute;
+    right: -7px;
+    top:60%;
+    z-index: 2;
+    background-color: #7a6e6e;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.scrollT:hover{
+    background-color: #b61d1d;
+}
+.toolBarWrap{
+    display: none;
+}

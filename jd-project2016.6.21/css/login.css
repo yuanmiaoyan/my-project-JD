@@ -1,0 +1,244 @@
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+    -webkit-font-smoothing: antialiased; /*可以让字体平滑更清晰*/
+}
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "microsoft yahei";
+    font-weight: 400;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.w990px{
+    width: 990px;
+    margin: 0 auto;
+}
+h1{
+    position: relative;
+    width: 300px;
+    margin-top: 10px;
+    height: 70px;
+}
+h1 a b{
+    display: block;
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: url(../img/l-icon.png) no-repeat;
+}
+.loginWrap{
+    width: 100%;
+    height: 475px;
+    background: #e51956;
+}
+.loginBg{
+    width: 100%;
+    height:475px;
+    background:#e51956 url("../img/login-bg.jpg") no-repeat ;
+}
+.loginBox{
+    width: 306px;
+    background: #fff;
+    padding: 20px;
+    float: right;
+    margin-top: 40px;
+    position: relative;
+}
+.loginTitle{
+    width: 306px;
+    height: 27px;
+}
+.loginTitle h2{
+    line-height: 27px;
+    line-height: 27px;
+    font-size: 20px;
+    float: left;
+    color: #666;
+}
+.loginTitleR{
+    float: right;
+    color: #b61d1d;
+    font-size: 14px;
+    padding-top: 7px;
+}
+.loginTitleR a b{
+    width: 16px;
+    height: 16px;
+    background: url("../img/pwd-icons-new.png") no-repeat -104px -75px;
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.msgWrap{
+    margin: 5px 0;
+}
+.msgWarn{
+    position: relative;
+    background: #fff6d2;
+    color: #666;
+    border: 1px solid #ffe57d;
+    padding: 3px 10px 3px 40px;
+    line-height: 18px;
+    height: 18px;
+}
+.msgWarn b{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    margin-top: -8px;
+    width: 16px;
+    height: 17px;
+    overflow: hidden;
+    background: url("../img/pwd-icons-new.png") no-repeat -104px -22px;
+}
+.loginCon .item{
+    position: relative;
+    margin-bottom: 20px;
+}
+.loginCon .item1,.loginCon .item2{
+    border: 1px solid #bdbdbd;
+    height: 38px;
+    width: 304px;
+}
+.loginTxt{
+    line-height: 18px;
+    height: 18px;
+    border: 0;
+    padding: 10px 0 10px 50px;
+    width: 254px;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+    outline: none;
+}
+.loginCon .item b{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(../img/pwd-icons-new.png) no-repeat;
+}
+.loginCon .item1 b{
+    background-position: 0 0;
+}
+.loginCon .focus{
+    border: 1px solid #3aa2e4;
+}
+.loginCon .focus .item1B {
+    background-position: 0 -48px;
+    border-right: 1px solid #3aa2e4;
+}
+.loginCon .item2 b{
+    background-position: -48px 0;
+}
+.loginCon .focus .item2B{
+    background-position: -48px -48px;
+    border-right: 1px solid #3aa2e4;
+}
+.item3{
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.item3 .left{
+     float: left;
+ }
+.item3 .right{
+    float: right;
+}
+.autoLogin{
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+    padding: 0;
+}
+.right a:hover{
+    text-decoration:underline;
+}
+.loginBtn{
+    border: 1px solid #cb2a2d;
+    margin: 0 auto;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+}
+.loginBtn a{
+    border: 1px solid #e85356;
+    display: block;
+    width: 302px;
+    background: #e4393c;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei';
+}
+.cooperate{
+    line-height: 22px;
+}
+.cooperate h5{
+    font-weight: 400;
+    color: #999;
+}
+.cooperate ul{
+    overflow: hidden;
+}
+.cooperate li{
+    float: left;
+}
+.cooperate .line {
+    color: #ccc;
+    padding: 0 10px;
+}
+.erweima{
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 99em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: url("../img/login-erweima-01.png") no-repeat  -60px 0px;
+    -webkit-transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+    -moz-transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+    transition: background-position .2s cubic-bezier(0.25,.5,.5,.9);
+}
+.erweimaWrap{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}

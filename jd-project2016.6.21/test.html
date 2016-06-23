@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #333;
+            display: block;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .box:hover{
+            opacity: 1;
+            filter: alpha(opacity=1);
+        }
+    </style>
+</head>
+<body>
+<a class="box" href="#"></a>
+<script>
+    console.log(isNaN("100%"))
+</script>
+</body>
+</html>

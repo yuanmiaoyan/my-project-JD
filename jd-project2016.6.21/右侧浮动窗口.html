@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    body {
+        height: 2000px;
+    }
+
+    #div1 {
+        width: 100px;
+        height: 150px;
+        background: red;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #div2 {
+        width: 20px;
+        color: white;
+        font-size: 20px;
+        height: 20px;
+        background: #000;
+        position: absolute;
+        right: 0px;
+        top: -20px;
+    }
+
+    #div2:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<div id="div1"></div>
+</body>
+<script type="text/javascript">
+    var oDiv = document.getElementById("div1");
+    var timer = null;
+    window.onscroll = function() {
+        var scrollT = (document.documentElement||document.body).scrollTop;
+        var target = ((document.documentElement.clientHeight || document.body.clientHeight) - oDiv.offsetHeight) / 2 + scrollT;
+        move(target);
+    }
+
+    function move(target) {
+        clearInterval(timer);
+        timer = setInterval(function(){
+            var speed = (target - oDiv.offsetTop)/30;
+            speed = speed>0?Math.ceil(speed):Math.floor(speed);
+
+            if(target == oDiv.offsetTop){
+                clearInterval(timer);
+            }else{
+                oDiv.style.top = speed+oDiv.offsetTop+'px';
+            }
+        },15)
+    }
+</script>
+
+<html>

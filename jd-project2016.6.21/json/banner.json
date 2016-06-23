@@ -1,0 +1,26 @@
+[
+  {
+    "imgSrc": "img/banner-01.jpg",
+    "desc": "这是测试图片"
+  },
+  {
+    "imgSrc": "img/banner-02.jpg",
+    "desc": "这是测试图片"
+  },
+  {
+    "imgSrc": "img/banner-03.jpg",
+    "desc": "这是测试图片"
+  },
+  {
+    "imgSrc": "img/banner-04.jpg",
+    "desc": "这是测试图片"
+  },
+  {
+    "imgSrc": "img/banner-05.jpg",
+    "desc": "这是测试图片"
+  },
+  {
+    "imgSrc": "img/banner-06.jpg",
+    "desc": "这是测试图片"
+  }
+]
