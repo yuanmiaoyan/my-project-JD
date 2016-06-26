@@ -1,4 +1,4 @@
-function stepBanner(id, ajaxUrl, interval,w) {
+function StepBanner(id, ajaxUrl, interval,w) {
     this.oBox = document.getElementById(id);
     this.oFloor = this.oBox.parentNode.parentNode.parentNode;
     this.oImgWrap = this.oBox.getElementsByTagName('div')[0];
@@ -18,8 +18,8 @@ function stepBanner(id, ajaxUrl, interval,w) {
     this.w=w;
     return this.init();
 }
-stepBanner.prototype = {
-    constructor: stepBanner,
+StepBanner.prototype = {
+    constructor: StepBanner,
     init: function () {
         var _this = this;
         //1.获取数据
@@ -31,7 +31,7 @@ stepBanner.prototype = {
         //3.延迟加载数据：
         this.setTimer = setTimeout(function () {
             _this.lazyImg();
-        }, 500);
+        }, 0);
         //4.图片自动轮播
         clearInterval(_this.autoTimer);
         this.autoTimer = setInterval(function () {

@@ -1,6 +1,9 @@
-/**
- * Created by yuanmiaoyan on 2016/6/4.
- */
+//floor01
+var oFloor01 = document.getElementById("floor01");
+var oFloor01Children = oFloor01.children;
+var aImgs = oFloor01.getElementsByTagName("img");
+var elevator = document.getElementById("elevator");
+var elevatorLis = elevator.getElementsByTagName("li");
 //topBanner 消失
 (function () {
     var oCloseBtn = document.getElementById("topBannerCloseBtn");
@@ -19,29 +22,19 @@
     var phoneNumber = document.getElementById("phoneNumber")
     new InputValue(phoneNumber, "移动、联通、电信");
 })();
+//大焦点图的懒加载及渐隐渐现效果
 new AutoBanner("bigBanner", 'json/banner.json', 2000);
-
-//floor01
-var oFloor01 = document.getElementById("floor01");
-var oFloor01Children = oFloor01.children;
-var aImgs = oFloor01.getElementsByTagName("img");
-var elevator = document.getElementById("elevator");
-var elevatorLis = elevator.getElementsByTagName("li");
-/*for(var n=0;n<elevatorLis.length;n++){
- var cur=elevatorLis[n];
- console.log(cur)
- var t=oFloor01.offsetTop;
- elevatorLis[0]
- }*/
-
 (function () {
     //floor #楼层懒加载及焦点图切换
     var oTop = oFloor01.offsetTop;
     var oElevator = document.getElementById("elevator")
+    var winBottom=utils.win('scrollTop') + utils.win('clientHeight');
     window.onscroll = function () {
-        var winBottom = utils.win('scrollTop') + utils.win('clientHeight');
-        lazy(winBottom);
-
+        winBottom = utils.win('scrollTop') + utils.win('clientHeight');
+        for (var i = 0; i < aImgs.length; i++){
+            var cur=aImgs[i];
+            lazy(cur,winBottom);
+        }
         var winBottom1 = utils.win('scrollTop');
         if (winBottom1 >= oTop) {
             oElevator.style.display = "block";
@@ -50,29 +43,53 @@ var elevatorLis = elevator.getElementsByTagName("li");
         }
         computedDisplay();
     };
-    function lazy(winBottom) {
-        var curT = utils.offset(oFloor01).top + oFloor01.offsetHeight / 2;
-        if (curT <= winBottom) {
-            for (var i = 0; i < aImgs.length; i++) {
-                (function (index) {
-                    var curImg = aImgs[index];
+    /*function lazy(winBottom) {
+     var curT = utils.offset(oFloor01).top + oFloor01.offsetHeight / 2;
+     if (curT <= winBottom) {
+     for (var i = 0; i < aImgs.length; i++) {
+     (function (index) {
+     var curImg = aImgs[index];
+     var oImg = new Image;
+     oImg.src = curImg.getAttribute('realImg');
+     oImg.onload = function () {
+     for (var j = 0; j < oFloor01Children.length; j++) {
+     oFloor01Children[j].style.display = "block";
+     }
+     curImg.src = this.src;
+     oImg = null;
+     }
+     })(i);
+     }
+     }
+     }*/
+    for (var i = 0; i < aImgs.length; i++){
+        var cur=aImgs[i];
+        lazy(cur,winBottom);
+    }
+    function lazy(curImg,winBottom) {
+        var curT = utils.offset(oFloor01).top + oFloor01.offsetHeight / 4;
+        /*if (curT <= winBottom) {*/
+        if(winBottom>=curT){
+           /* for (var i = 0; i < aImgs.length; i++) {*/
+                /*(function (index) {*/
+                    //var curImg = aImgs[index];
                     var oImg = new Image;
                     oImg.src = curImg.getAttribute('realImg');
                     oImg.onload = function () {
-                        curImg.src = this.src;
                         for (var j = 0; j < oFloor01Children.length; j++) {
                             oFloor01Children[j].style.display = "block";
                         }
-
+                        curImg.setAttribute('src',this.src);
+                        //curImg.src = this.src;
                         oImg = null;
                     }
-                })(i);
-            }
+                /*})(i);*/
+           /* }*/
         }
     }
 
     for (var i = 1; i < 10; i++) {
-        new stepBanner("floor01Banner0" + i, 'json/stepBanner.json', 3000 - 100 * i, 439);
+        new StepBanner("floor01Banner0" + i, 'json/stepBanner.json', 3000 - 100 * i, 439);
     }
     /*new stepBanner("floor01Banner01", 'json/stepBanner.json', 2000);
      new stepBanner("floor01Banner02", 'json/stepBanner.json', 1500);
@@ -84,8 +101,6 @@ var elevatorLis = elevator.getElementsByTagName("li");
      new stepBanner("floor01Banner08", 'json/stepBanner.json', 1000);
      new stepBanner("floor01Banner09", 'json/stepBanner.json', 1300);*/
 })();
-
-
 //热门晒单轮播
 (function () {
 
@@ -108,7 +123,6 @@ var elevatorLis = elevator.getElementsByTagName("li");
 
     timer = window.setInterval(autoTop, 5000)
 })();
-
 //lifeTabs//生活服务
 (function () {
     var hoverShowWrap = document.getElementById("hoverShowWrap");
@@ -183,15 +197,16 @@ var elevatorLis = elevator.getElementsByTagName("li");
         }
     }
 
-})()
-
+})();
 //楼层选项卡
+(function(){
 new Tab("floor01");
 new Tab("floor02");
 new Tab("floor03");
 new Tab("floor04");
 function Tab(tabId) {
     var oFloor = document.getElementById(tabId);
+    //普通法
     /*var oTab = document.getElementById("tab");
      var oLis = oTab.getElementsByTagName("li");
      var oFloor01 = document.getElementById("floor01");
@@ -208,6 +223,7 @@ function Tab(tabId) {
      utils.addClass(child[this.index], "show");
      }
      }*/
+    //事件委托
     oFloor.onmouseover = function (e) {
         e = e || window.event;
         var tar = e.target || e.srcElement, tarTag = tar.parentNode, tagName = tarTag.tagName.toUpperCase();
@@ -223,37 +239,40 @@ function Tab(tabId) {
             utils.addClass(child[index], "show");
         }
     }
-
 }
-
-    var oBtn=document.getElementById('scrollT');
-    var toolBarWrap=document.getElementById('toolBarWrap');
-   // window.onscroll=computedDisplay;
-    function computedDisplay(){
-        if(utils.win('scrollTop')>=utils.win('clientHeight')){
-            toolBarWrap.style.display='block';
-        }else{
-            toolBarWrap.style.display='none';
+})();
+//右侧的回到顶部
+(function () {
+    var oBtn = document.getElementById('scrollT');
+    var toolBarWrap = document.getElementById('toolBarWrap');
+// window.onscroll=computedDisplay;
+    function computedDisplay() {
+        if (utils.win('scrollTop') >= utils.win('clientHeight')) {
+            toolBarWrap.style.display = 'block';
+        } else {
+            toolBarWrap.style.display = 'none';
         }
     }
-    oBtn.onclick=function(){
+    window.computedDisplay=computedDisplay;
+    oBtn.onclick = function () {
         //this.style.display='none';
-        window.onscroll=null;
-        var duration=500;
-        var interval=10;
-        var target=utils.win('scrollTop');
-        var step=(target/duration)*interval;
-        var timer=setInterval(function(){
-            var curT=utils.win('scrollTop');
-            if(curT<=0){
+        window.onscroll = null;
+        var duration = 500;
+        var interval = 10;
+        var target = utils.win('scrollTop');
+        var step = (target / duration) * interval;
+        var timer = setInterval(function () {
+            var curT = utils.win('scrollTop');
+            if (curT <= 0) {
                 clearInterval(timer);
-                window.onscroll=computedDisplay;
+                window.onscroll = computedDisplay;
                 return;
             }
-            curT-=step;
-            utils.win('scrollTop',curT);
-        },interval)
+            curT -= step;
+            utils.win('scrollTop', curT);
+        }, interval)
     }
+})();
 
 
 

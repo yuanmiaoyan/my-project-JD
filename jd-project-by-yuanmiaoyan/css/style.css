@@ -667,7 +667,7 @@ img {
     z-index: 5;
     position: fixed;
     left: -8.5px;
-    top: 10.5px;
+    top: 90px;
     display: none;
     width: 30px;
     overflow: hidden;
@@ -2152,4 +2152,22 @@ img {
 }
 .toolBarWrap{
     display: none;
+}
+.txtlayer{
+    background: #fff;
+    width: 454px;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ccc;
+    top:34px;
+    display: none;
+}
+.txtlayer li{
+    overflow: hidden;
+    padding: 1px 6px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.txtlayer li:hover{
+    background: #f2f2f2;
 }

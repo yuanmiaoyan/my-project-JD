@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index京东(JD.COM)-综合网购首页</title>
+    <title>京东(JD.COM)-综合网购首页</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/img/favicon.ico" mce_href="/img/favicon.ico" type="image/x-icon">
 </head>
@@ -35,7 +35,7 @@
         </div>
         <ul class="headTopR">
             <li class="headTopLogin">
-                <a href="javascript:;" class="linkLogin">你好，请登录</a>&nbsp;&nbsp;
+                <a href="channel/login.html" class="linkLogin">你好，请登录</a>&nbsp;&nbsp;
                 <a href="javascript:;" class="linkRegister colorRed">免费注册</a>
             </li>
             <!--间隔线-->
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="userInfoR">
                                     <div class="userName">
-                                        <a href="javascript:;" target="_blank">您好，请登录</a>
+                                        <a href="channel/login.html" target="_blank">您好，请登录</a>
                                     </div>
                                     <div>
                                         <a href="javascript:;" target="_blank">优惠券</a>
@@ -304,8 +304,8 @@
     <div class="searchWrap">
         <div class="searchBox">
             <input type="text" id="searchTxt" class="searchTxt" autocomplete="off" value="平板电视">
-            <button class="searchBtn">搜索</button>
-            <div>
+            <button class="searchBtn" id="searchBtn">搜索</button>
+            <div class="txtlayer">
                 <ul id="oUl">
                 </ul>
             </div>
@@ -1172,7 +1172,7 @@
                 <div class="centerTop">
                     <i class="activityLogo"></i>
                     <a href="javascript:;">
-                        <img realImg="img/floor1-pic-01.jpg">
+                        <img realImg="img/floor1-pic-01-2.jpg">
                     </a>
                 </div>
                 <div class="centerSlider" id="floor01Banner02">
@@ -2006,13 +2006,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="floorCon">3</div>
-    <div class="floorCon">4</div>
-    <div class="floorCon">5</div>
-    <div class="floorCon">6</div>
-    <div class="floorCon">7</div>
-    <div class="floorCon">8</div>
-    <div class="floorCon">9</div>-->
     <div class="floorBottomAds" style="display: none">
         <ul>
             <li><a href="javascript:;"><img realImg="img/floor1-bottom-ads-01.png"></a></li>
@@ -5107,19 +5100,17 @@
         </li>
         <li class="top4">
             <i class="icon"></i>
-            <b>我的收藏</b>
+            <b>我的足迹</b>
         </li>
         <li class="top5">
             <i class="icon"></i>
-            <b>我的收藏</b>
+            <b>咨询JIMI</b>
         </li>
     </ul>
 
     <div class="scrollT" id="scrollT"></div>
 </div>
 <!--right end-->
-
-
 <script src="js/utils.js"></script>
 <script src="js/subNav.js"></script>
 <script src="js/animate.js"></script>
@@ -5137,8 +5128,8 @@
     }
     window.onload = function () {
         var searchInput = document.querySelector('#searchTxt');
-        var searchBtn = document.querySelector('#search-btn');
-        var ul = document.querySelector('oUl');
+        var searchBtn = document.querySelector('#searchBtn');
+        var ul = document.getElementById('oUl');
         var oBox=document.querySelector('#div');
 
 
@@ -5150,6 +5141,7 @@
             if (val) {
                 baiduSuggestion(val, function (data) {
                     ul.style.display='block';
+                    ul.parentNode.style.display="block";
                     ul.innerHTML = '';
                     var list = data.s;
                     if (list.length === 0) {
@@ -5168,10 +5160,11 @@
                     var target = e.target || e.srcElement;
                     window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(target.innerHTML),'_blank');
                     ul.style.display='none';
+                    ul.parentNode.style.display="none";
                 };
             }
         };
-        searchInput.onfocus=asociate;
+       // searchInput.onfocus=asociate;
         searchBtn.onclick=function(e){
             console.log(searchInput.innerHTML)
             e || (e = window.event);
@@ -5180,6 +5173,7 @@
         }
         ul.onmouseleave = function () {
             ul.style.display='none';
+            ul.parentNode.style.display="none";
         }
     }
 </script>
